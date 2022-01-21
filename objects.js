@@ -56,7 +56,6 @@ var notes = [9, 10, 12, 15, 16, 17, 18, 19, 20];
 //     i++;
 // }
 
-// console.log(data.length)
 
 
 
@@ -66,6 +65,8 @@ function extractDownloadCount(book){
     return book.download_count;
 }
 
+
+var l = 1234567;
 
 var i = 0;
 var resultat_final = 0;
