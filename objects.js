@@ -76,3 +76,6 @@ while (i < books.results.length){
 
 
 console.log(resultat_final);
+
+
+var la = 2000
