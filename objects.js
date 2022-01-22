@@ -59,13 +59,14 @@ var notes = [9, 10, 12, 15, 16, 17, 18, 19, 20];
 // console.log(data.length)
 
 
-
+//extraire le download count de livre
 
 var books = require("./books.js");
 function extractDownloadCount(book){
     return book.download_count;
 }
 
+//somme de download count de livres
 
 var i = 0;
 var resultat_final = 0;
