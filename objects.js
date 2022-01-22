@@ -65,7 +65,7 @@ var books = require("./books.js");
 function extractDownloadCount(book){
     return book.download_count;
 }
-
+//extract dowload from un livre 
 
 var i = 0;
 var resultat_final = 0;
@@ -73,6 +73,6 @@ while (i < books.results.length){
     resultat_final += extractDownloadCount(books.results[i]);
     i++;
 }
-
+//loadd data
 
 console.log(resultat_final);
