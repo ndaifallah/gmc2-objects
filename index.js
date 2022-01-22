@@ -19,3 +19,10 @@ var result = a + b;
 
 console.log("Le résultat =", result);
 
+var c = 23486;
+
+var d = 23486;
+
+var sum= c + d;
+
+console.log(sum);
