@@ -59,14 +59,17 @@ var notes = [9, 10, 12, 15, 16, 17, 18, 19, 20];
 
 
 
-
+// Load data
 var books = require("./books.js");
+// Extract download from un livre
 function extractDownloadCount(book){
     return book.download_count;
 }
 
 
 var l = 1234567;
+
+// Faire mapping
 
 var i = 0;
 var resultat_final = 0;
