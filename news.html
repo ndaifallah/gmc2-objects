@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fake news</title>
+    <script>
+        var aaa = 0;
+    </script>
+    <script src="./data.js"></script>
+    <script>
+        console.log(news[0].excerpt.rendered);
+
+        function op(element){
+            console.log(element.excerpt.rendered);
+        }
+        //news.map(op);
+
+
+        // var moyenne = [19, 10, 9, 0];
+        // function moy(note){
+        //     if(note<10){
+        //         console.log("ajourné");}
+        //     else{
+        //         console.log("admis");}
+        // }
+        // moyenne.map(moy);
+
+    </script>
+</head>
+<body>
+    <div id="component" >
+        Algerie360 - Actualité et Information sur l&#039;Algérie
+    </div>
+    <h1>Fake News</h1>
+    <script>
+        var name = 'sabrina';
+        //recuperer le composant qui va contenir mon resultat
+        var MyComponent = document.querySelector("#component");
+        //initialisation de mon resultat
+        var resultHTML = "";
+        //${newsElement.og_image.url}
+        //pour chaque element de news je le rajoute a mon html resultat
+        function AddTitleHTML(newsElement) {
+            resultHTML = resultHTML + `<div class="contenu">
+        <div class="img"><img src="${newsElement.yoast_head_json.og_image[0].url}" alt=""></div>
+        <div class="txt">
+            <h2>${newsElement.title.rendered}</h2>
+            <p>${newsElement.excerpt.rendered}</p>
+        </div>
+    </div>`;
+        }
+        news.map(AddTitleHTML);
+        console.log(resultHTML);
+        MyComponent.innerHTML=`${resultHTML}</br>`;
+        //MyComponent.innerHTML=`<h2>${resultHTML}</h2></br>`;
+
+        //MyComponent.innerHTML=`<b>titre est : ${news[0].title.rendered}</b> ${name}`;
+    </script>
+
+</body>
+</html>

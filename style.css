@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+    padding: 8px;
+}
+
+.contenu{
+    display: flex;
+}
+
+.img{
+    width: 350px;
+    height: 300px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+}
+.txt{
+    margin-left: 20px;
+}
+
+.txt h2{
+    font-weight: bolder;
+    margin-top: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.txt p{
+    max-width: 500px; 
+    line-height: 2;
+    margin-bottom: 20px;
+}
