@@ -1,0 +1,10 @@
+.align {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    }
+.text1{font-family: Arial, Helvetica, sans-serif;}
+.taille {
+    width: 50%;
+    height: 674;
+}

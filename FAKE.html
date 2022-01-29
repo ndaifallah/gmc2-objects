@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAKENEWS</title>
+    <link href="FAKESTYLE.CSS" rel="stylesheet" />
+    <script src="./data.js"></script>
+    
+</head>
+<body>
+    <div class="align text1">
+    <div><img class= "taille" src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg" alt=""></div>
+    <div><h2>TRES PAS DE BONNE CHOSE ONT ETAIT DITE</h2>
+    <p>BLA MAIS PAS BLA BLA BLA OULALALALALLALALALALLALA</p></div>
+    </div>
+    <div id="my_composant"></div>
+    <script>
+        /* console.log(nu)
+         function extraire(el){console.log(el.excerpt)}
+         nu.map(extraire)*/
+         /*var moyenne = [19, 10, 9, 0];
+         function oki (el) {if (el>=10) {console.log("super")} else {console.log("byeBye")}}
+         moyenne.map(oki)------------------------------------------------------------------------------*/
+         /*console.log(nu[0].title.rendered)
+         var my_composant = document.querySelector("#my_composant");
+         var name="nasro";
+         my_composant.innerHTML = `le titre est: <b>${nu[0].title.rendered}<b> ${name}`------------------*/
+         /*var resultHTML="";
+         function addTitleToHTML (nuElement){resultHTML = resultHTML + `${nuElement.title.rendered}<br>` } //pour chaque element de Nu j'ajoute un tilte
+         nu.map(addTitleToHTML);
+         console.log(resultHTML);
+         my_composant.innerHTML = `${resultHTML}`;------------------------------------------------------*/
+         /*var resultHTML="";
+         function addTitleToHTML (nuElement){
+             resultHTML = resultHTML + `<div class="align text1">
+    <div><img class= "taille" src="${nuElement.yoast_head_json.og_image[0].url}" alt=""></div>
+    <div><h2>${nuElement.title.rendered}</h2>
+    <p>${nuElement.excerpt.rendered}</p></div>
+    </div>` 
+            } //pour chaque element de Nu j'ajoute un title
+         nu.map(addTitleToHTML);
+         console.log(resultHTML);
+         my_composant.innerHTML = `${resultHTML}`;*/
+
+     //-------------------calcul la somme
+     var integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+     var t = 0;
+     function add (el){
+        t = t + el;
+     }
+     integers.map(add);
+     console.log(t)
+
+// ----------------------calcul de la moyenne
+   var x = 0;
+   var m = 0;
+   function tot (el){
+       x=x+el;
+   }
+    integers.map(tot);
+    function moy (){
+        m = x/integers.length;
+    }
+moy(m);
+console.log(m);
+     </script>
+
+
+</body>
+
+</html>
