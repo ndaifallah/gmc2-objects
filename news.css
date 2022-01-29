@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-decoration: underline dotted gray;
+    margin-bottom: 35px;
+}
+.el {
+    display: flex;
+    margin : 20px 10px ;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px ;
+}
+
+.img {
+    width: 350px;
+    height: 100%;
+    margin: 20px;
+}
+.txt {
+    padding: 5px;
+}

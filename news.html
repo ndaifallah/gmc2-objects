@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New News</title>
+
+    <link rel="stylesheet" href="news.css">
+    <script src="data.js"></script>
+    
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Fake News :</h1>
+        <div id="print_js"> </div>
+    </div>
+    <div>
+        <div class="el">
+            <div >
+                <img class="img" src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg" alt="">
+            </div>
+            <div class="txt">
+                <h3 class="h3">Météo Algérie : les prévisions pour ce 21 janvier</h3>
+                <p class="para"> Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après une semaine joliment ensoleillée, les nuages seront au rendez-vous dans certaines régions du pays. Quant aux températures seront stables donc toujours fraiches. Les conditions ne changeront donc pas pour ce vendredi. En dépit de quelques poches de grisailles qui donneront un temps </p>
+            </div>
+        </div>
+        <!-- <div class="el">
+            <div >
+                <img class="img" src="https://www.algerie360.com/wp-content/uploads/2022/01/7eBHbmGtKFeB30O2eHbyec-scaled.jpg" alt="">
+            </div>
+            <div>
+                <h3 class="h3">Élimination CAN 2022 : ce qui n&rsquo;a pas marché pour l&rsquo;Algérie</h3>
+                <p class="para">Sur le papier, l’équipe d&rsquo;Algérie était la favorite de cette CAN 2021. Mais le problème du papier, c’est qu’on a vite fait de le rouler en boule puis de le jeter dans la première poubelle venue. Le football  encore plus celui de sélection –est pénible aussi. Rares sont les pays qui ont étiré leur domination [&hellip;]</p>
+            </div>
+        </div>
+        <div class="el">
+            <div >
+                <img class="img" src="https://www.algerie360.com/wp-content/uploads/2020/08/sablette-1-scaled.jpg" alt="">
+            </div>
+            <div>
+                <h3 class="h3">Nouvelles mesures anti-Covid à Alger : les espaces de loisirs fermés</h3>
+                <p class="para">La wilaya d&rsquo;Alger vient d&rsquo;annoncer une série de mesures anti-covid pour faire face à la quatrième vague de coronavirus que traverse actuellement l&rsquo;Algérie. Dans un communiqué rendu public ce jeudi 20 janvier 2022 ; les services de la wilaya d&rsquo;Alger ont annoncé plusieurs mesures préventives contre le coronavirus, dont la fermeture des espaces de loisirs. [&hellip;]</p>
+            </div>
+        </div> -->
+    </div>
+    <div id="print_js"> </div>
+    <script>
+        // function extractT(el) { 
+        //     console.log(el.title.rendered)
+        // }
+        // news.map(extractT)
+
+        // function extractP(el) {
+        //     console.log(el.excerpt.rendered)
+        // }
+        // news.map(extractP)
+
+        // function extractImg(el) {
+        //     console.log(el.yoast_head_json.og_url)
+        // }
+        //  news.map(extractImg)
+                //
+        //  var moyenne = [19, 10, 9, 0];
+        //  function add(el) {
+        //      if(el>=10) console.log(true)
+        //      else console.log(false)
+        //  }
+        //  moyenne.map(add)
+
+                /****  print in HTML ****/ 
+           var print = document.querySelector("#print_js")
+            //print.innerHTML = `TO Day : ${news[0].title.rendered} `
+            var resultHTML = "";
+            function addTitleToHtml(newsEl) {
+                resultHTML = resultHTML + `        <div class="el">
+            <div >
+                <img class="img" src="${newsEl.yoast_head_json.og_image[0].url}" alt="">
+            </div>
+            <div>
+                <h3 class="h3"> ${newsEl.title.rendered}</h3>
+                <p class="para"> ${newsEl.excerpt.rendered}</p>
+            </div>
+        </div>`;
+            }
+            news.map(addTitleToHtml) 
+            print.innerHTML = `${resultHTML}`
+
+
+
+    </script>
+  
+</body>
+</html>
