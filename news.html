@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .single-news {
+            display: flex;
+
+        }
+        .image-container{
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .image-container img{
+            width: 100%;
+        }
+        .content-container{
+            margin-left: 20px;
+            max-width: 50%;
+        }
+        .content-container h2{
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
+        .content-container p{
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+    <title>Fake news</title>
+    <script src="./data.js"></script>
+    
+</head>
+<body>
+    <h1>Fake news</h1>
+    <div id="component">
+
+    </div>
+
+    <div>
+        
+    </div>
+    <script>
+
+        // récupérer le composant qui va contenir mon résultat
+        var my_component = document.querySelector("#component");
+        // Initialisation du résultat
+        var resultHTML = "";
+        // Pour chaque element de news je le rajoute à mon HTML résultat
+        function addTitleToHTML(newsElement){
+            // input from the caller is var newsElement
+            resultHTML = resultHTML + `<div class="single-news">
+            <div class="image-container">
+                <img src="${newsElement.yoast_head_json.og_image[0].url}"/>
+            </div>
+            <div class="content-container">
+                <h2>${newsElement.title.rendered}</h2>
+                <p>${newsElement.excerpt.rendered}</p>
+            </div>
+        </div>`;
+        }
+
+        
+        news.map(addTitleToHTML);
+        // console.log(resultHTML);
+
+        my_component.innerHTML = `${resultHTML}`;
+
+
+        function extraire(el) {
+            console.log(el.title.rendered);
+        }
+
+
+        // var moyenne = [19, 10, 9, 0];
+
+        // news.map(extraire);
+        // news.map()
+        // let element = news[3];
+        // extraire(element);
+        var integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var somme = 0;
+        integers.map((el) => somme = somme + el);
+        console.log(somme / integers.length);
+    </script>
+</body>
+</html>
