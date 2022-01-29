@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newss</title>
+    <link rel="stylesheet" href="news.css">
+    <script src="./data.js"></script>
+    <!--<script>
+        // function extract(el){
+            // console.log(el.excerpt.rendered);
+        }
+        //news.map(extract)
+      //  function extract(el){
+        //    console.log(el.title.rendered);
+    //
+    
+    // var moyenne = [19, 10, 9, 0];
+    // function calculeM(moyenneActuelle){
+        // if(moyenneActuelle >= 10)
+        // console.log("admit");
+        // else
+        // console.log("nonadmit");
+    // }
+    // moyenne.map(calculeM);
+    
+    console.log
+    
+    
+    
+    
+    </script>-->
+</head>
+<body>
+    <h1> <span>NEWS :</span>Fake news</h1>
+    <div id="component"> 
+
+
+    </div>
+    <div id="dad">
+        <div>
+            <img  id="img1" src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg" alt="">
+        </div>
+        <div id="text">
+            <h4> Météo Algérie : les prévisions pour ce 21 janvier</h4>
+            <p>Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après une semaine joliment ensoleillée, les nuages seront au rendez-vous dans certaines régions du pays. Quant aux températures seront stables donc toujours fraiches.</p>
+        </div>
+    </div>
+    <!--<div id="dad">
+        <div>
+            <img  id="img1" src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg" alt="">
+        </div>
+        <div id="text">
+            <h4>Météo Algérie : les prévisions pour ce 21 janvier</h4>
+            <p>Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après une semaine joliment ensoleillée, les nuages seront au rendez-vous dans certaines régions du pays. Quant aux températures seront stables donc toujours fraiches.</p>
+        </div>
+    </div>
+    <div id="dad">
+        <div>
+            <img  id="img1" src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg" alt="">
+        </div>
+        <div id="text">
+            <h4>Météo Algérie : les prévisions pour ce 21 janvier</h4>
+            <p>Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après une semaine joliment ensoleillée, les nuages seront au rendez-vous dans certaines régions du pays. Quant aux températures seront stables donc toujours fraiches.</p>
+        </div>
+    </div>
+    <div id="dad">
+        <div>
+            <img  id="img1" src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg" alt="">
+        </div>
+        <div id="text">
+            <h4>Météo Algérie : les prévisions pour ce 21 janvier</h4>
+            <p>Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après une semaine joliment ensoleillée, les nuages seront au rendez-vous dans certaines régions du pays. Quant aux températures seront stables donc toujours fraiches.</p>
+        </div>
+    </div>-->
+    <!--<script>
+        console.log(news[0].title.rendered);
+
+//recuperer le composant qui va contenir mon resultat
+
+        var my_component = document.querySelector("#component");
+        var name = "anis" ;
+
+//inisialisation de resultat
+
+        var resultHTML="";
+        
+//pour chaque element de news je le rajoute a mon Html  resultat
+
+        function addTiteleToHTML(newsElement){
+            //tsema re7 napliqiw 3liha 3la chaque element men la data
+            resultHTML = resultHTML + `<div id="dad">
+        <div>
+            <img  id="img1" src="${newsElement.yoast_head_json.og_image[0].url}" alt="">
+        </div>
+        <div id="text">
+            <h4>${newsElement.title.rendered}</h4>
+            <p>${newsElement.excerpt.rendered}</p>
+        </div>
+    </div>`;
+        }
+        news.map(addTiteleToHTML);
+        console.log(addTiteleToHTML);
+        
+        my_component.innerHTML = `${resultHTML}`;
+
+       // my_component.innerHTML = `le titre est : ${news[0].title.rendered} ${name}`;
+    </script>-->
+
+    <div id="now"> </div>
+<!--<script>
+            var integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            var s = 0;
+            
+            function somme(el){
+            
+                s = s + el;
+            }
+            integers.map(somme)
+            console.log(s)
+
+            var now_ = document.querySelector("#now")
+            now_.innerHTML = `${s}`; 
+</script>
+-->
+<script>
+        var integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        var s = 0;
+        var moyen = 0;
+            
+            function somme(el){
+            
+                s = s + el;
+            }
+            integers.map(somme)
+            moyen = s/integers.length;
+            console.log(moyen)
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

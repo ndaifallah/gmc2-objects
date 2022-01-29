@@ -1,0 +1,24 @@
+body{
+    padding: 10px;
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#img1{
+    width: 300px; 
+    
+    
+}
+#dad{
+    display: flex;
+    margin-top: 50px;
+}
+#text {
+    padding: 30px;
+    margin-top: -30px;
+}
+span{
+    color: rgb(163, 0, 0);
+}
+h4{
+    color:rgb(163, 0, 0) ;
+}
