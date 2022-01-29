@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        h1{
+            font-size:35px;
+        }
+        .component{
+            display:flex;
+            align-items:center;
+            
+        }
+        .gaucho{
+            width:27% ;
+            
+            
+        }
+        .gaucho img{
+            width: 300px;
+            margin-left: 50px;
+            overflow: hidden;
+        }
+
+        .Droite{
+            display: flex;
+            flex-direction: column;
+            width: 700px;
+        }
+
+        .titreArticle{
+            font-size:25px;
+        }
+
+        p{
+            line-height: 1.5;
+        }
+    </style>
+   
+
+    
+</head>
+<body>
+    <h1> Daily Delivering Fake News </h1>
+    <div id="composant"></div>
+    <div class="component">
+        <div class="gaucho">
+            <img src=" https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg">
+        </div>
+
+        <div class="Droite">
+            <h2 class="titreArticle">
+                Météo Algérie : les prévisions pour ce 21 janvier
+            </h2>
+            <p class="Article">
+                Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après une semaine joliment ensoleillée, les nuages seront au rendez-vous dans certaines régions du pays. Quant aux températures seront stables donc toujours fraiches. Les conditions ne changeront donc pas pour ce vendredi. En dépit de quelques poches de grisailles qui donneront un temps.
+            </p>
+        </div>
+    </div>
+
+    
+
+
+    <script src="./data.js" ></script>
+
+    <script> 
+   
+        function op(element){
+            console.log(element.title.rendered);
+        }
+
+    news.map(op);
+
+        /*function ux(deusio){
+            console.log(deusio.excerpt.rendered);
+        }
+
+        news.map(ux);
+
+        var moyenne = [8, 10, 18, 12];
+
+        function reussite(resultat){
+            if(resultat >=10){
+                console.log("Passage");
+            }else {
+                console.log("recalé")
+            }
+        }
+        moyenne.map(reussite);*/
+        console.log(news[0].title.rendered);
+        var new_component = document.querySelector("#composant");
+        var name= "Alpha";
+        new_component.innerHTML =`Le titre est: ${news[0].title.rendered} ${name}`;
+
+        // recuperer le composant (vide) qui va contenir mon resultat
+    var new_component= document.querySelector("#composant")
+        // initialisation du résultat
+    var resultHTML = "";
+        // Pour chaque element de news je le rajoute à mon HTML résultat
+    function addTitleToHTML(newsElement) {
+        resultHTML =resultHTML + `<b> ${newsElement.title.rendered} </b>`;
+    }
+
+    news.map(addTitleToHTML);
+    console.log(resultHTML);
+    new_component.innerHTML = `${resultHTML}`
+
+
+    //////////////////////////////
+    // recuperer le composant (vide) qui va contenir mon resultat
+    var new_component= document.querySelector("#composant")
+        // initialisation du résultat
+    var resultHTML = "";
+        // Pour chaque element de news je le rajoute à mon HTML résultat
+    function addTitleToHTML(newsElement) {
+        resultHTML =resultHTML + ` <div class="component">
+        <div class="gaucho">
+            <img src=" ${newsElement.yoast_head_json.og_image[0].url}">
+        </div>
+
+        <div class="Droite">
+            <h2 class="titreArticle">
+               ${newsElement.title.rendered}
+            </h2>
+            <p class="Article">
+                ${newsElement.excerpt.rendered}
+            </p>
+        </div>
+    </div>
+`;
+    }
+
+    news.map(addTitleToHTML);
+    console.log(resultHTML);
+    new_component.innerHTML = `${resultHTML}`
+
+   /* var integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var  somme = 0;
+   integers.map(function(element){
+       somme = somme + element;
+   })*/
+
+   //1ere methode
+    /*var integers = [22, 50, 18, 10 , 8, 5, 15, 11]
+        var moy = 0;
+        integers.map(function(element){
+            moy = moy+ (element /integers.length)
+        })*/
+
+    //2eme méthode 
+    var integers = [22, 50, 18, 10 , 8, 5, 15, 11]
+    var somme = 0;
+    integers.map((el) => somme = somme+el);
+    console.log(el)
+
+    </script>
+</body>
+</html>
