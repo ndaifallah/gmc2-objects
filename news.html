@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="./data.js">
+              
+    </script>
+    <script> /*var aaa= 0; 
+    function op(element){
+
+        console.log(element.excerpt.rendered); 
+        
+           
+    } */
+
+    var moyenne = [19, 10, 9, 0];
+    function admis(note){
+    
+      if (note<10) { 
+          console.log (`le stagiare dont la note est: ${note} est ajournee`); 
+        } 
+      else {
+          console.log( "le stagiare est admis"); 
+        }
+
+    }
+    moyenne.map(admis);
+    
+    </script>
+    
+
+   
+   
+    
+        
+</head>
+<body>
+    <div id="component"></div>
+    <h1>fake news</h1>
+    
+    <!--<div class="article">
+
+        <div class="monimage">
+         <img src="https://www.algerie360.com/wp-content/uploads/2022/01/soleil-meteo.jpg">
+        </div>
+
+        <div class="description">
+         <h2>
+            meteo-algerie-les-previsions-pour-ce-21-janvier
+         </h2>
+         <p>
+            Le Soleil jouera les timides en cette journée de vendredi 21 janvier. Après
+         </p>
+        </div> -->
+
+ 
+ 
+ <script>
+ console.log(news[0].title.rendred); 
+ var my_compo = document.querySelector("#component"); 
+
+ var name= "si"; 
+ /*my_compo.innerText =` le titre est : ${news[0].title.rendred} ${name}`; */
+
+ my_compo.innerText =` le titre est : ${news[0].title.rendered} ${name}`;
+ console.log(my_compo); 
+var resolthtml=""; 
+function addtitletohtml(newlement){
+    resolthtml= resolthtml +  ` <div class="article">
+
+<div class="monimage">
+ <img src= ${newlement.yoast_head_json.og_image[0].url}>
+</div>
+
+<div class="description">
+ <h2>
+    ${newlement.title.rendered}
+ </h2>
+ <p>
+    ${newlement.excerpt.rendered}
+ </p>
+</div> </div>`;  
+    
+}
+news.map(addtitletohtml); 
+console.log(resolthtml); 
+my_compo.innerHTML= `${resolthtml}`; 
+ 
+ 
+ 
+ </script>
+
+    
+
+
+</body>
+</html>

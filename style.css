@@ -1,0 +1,15 @@
+.article{
+
+    display: flex;
+    
+    
+}
+.monimage{
+width: 300px;
+height: 300px;
+
+
+}
+.monimage img{
+    width: 100%;
+}
