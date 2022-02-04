@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+</head>
+<body>
+    <div style="max-width: 500px; margin: auto">
+        <h1>Calculate sum</h1>
+        <br>
+        <div class="input-field">
+            <input type="number" id="a"/>
+            <label for="a">First number</label>
+        </div>
+        <br>
+        <div class="input-field">
+            <input type="number" id="b"/>
+            <label for="b">First number</label>
+        </div>
+        <button class="waves-effect waves-light btn-large" >Calculate</button>
+        <br>
+        <br>
+        <h2>
+            2345678
+        </h2>
+    </div>
+    <script>
+        function add(a, b){
+            return a + b;
+        }
+
+        // Target the button
+        var myButton = document.querySelector("button");
+        myButton.onclick = function (evt) {
+            // Récupération des valeurs
+            var a = document.querySelector("#a").value;
+            var b = document.querySelector("#b").value;
+            // traitement
+            var result = add(parseInt(a), parseInt(b));
+            // affichage
+            document.querySelector("h2").innerText = result;
+        }
+    </script>
+</body>
+</html>

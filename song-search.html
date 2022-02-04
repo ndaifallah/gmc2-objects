@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New iTunes</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+</head>
+<body>
+    <div style="width: 100%;">
+        <div style="max-width: 400px; margin: auto">
+            <h1>Song search</h1>
+            <div class="input-field">
+                <input type="text"  id="search" placeholder="Search...">
+                <label for="search">Search</label>
+            </div>
+            <br>
+            <button class="waves-effect waves-light btn-large" >Search</button>
+        </div>
+
+    </div>
+    <div id="search-result" style="display: flex; flex-wrap: wrap;">
+        
+        
+        
+        
+
+    </div>
+    
+    <script>
+        var myButton = document.querySelector("button");
+        myButton.onclick = async function (evt){
+            var search_term = document.querySelector("#search").value;
+            var response = await fetch(`https://itunes.apple.com/search?term=${search_term}&media=ebook`);
+            var data = await response.json();
+            console.log(data);
+            // Target the parent div
+            var search_result = document.querySelector("#search-result");
+            var html = "";
+
+            function addResultToCard(element){
+                html = html + `<!-- Single card -->
+                                    <div class="card"   style="width: 300px; margin-right: 20px; margin-bottom: 20px;">
+                                        <div class="card-image">
+                                            <img src="${element.artworkUrl100}">
+                                            <span class="card-title">${element.trackName}</span>
+                                        </div>
+                                        <div class="card-content">
+                                            <p>${element.description}</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#">This is a link</a>
+                                        </div>
+                                    </div>
+                                <!-- End of single card -->`
+            }
+            data.results.map(addResultToCard);
+            console.log(html)
+            search_result.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
